@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakarsa - Elevating Visual Excellence</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafaf9;
+            overflow-x: hidden;
+        }
+
+        /* Modern Mesh Gradient Background */
+        .hero-gradient {
+            background: radial-gradient(at 0% 0%, rgba(254, 243, 199, 0.5) 0, transparent 50%),
+                        radial-gradient(at 100% 0%, rgba(161, 130, 74, 0.1) 0, transparent 50%);
+        }
+
+        /* Glassmorphism Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+
+        /* Luxury Card Shadow & Hover */
+        .main-card {
+            background: white;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 1.25rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        .service-card {
+            border-radius: 2rem;
+            background: white;
+            border: 1px solid #f3f4f6;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(139, 109, 59, 0.15);
+            transform: translateY(-10px);
+        }
+
+        /* Animated Logo Aura */
+        .logo-aura {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(254,243,199,0.3) 0%, transparent 70%);
+            animation: pulse 4s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        /* Responsive Nav Menu */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+            .navbar-nav.active { display: flex; }
+        }
+    </style>
+</head>
+<body class="hero-gradient">
+
+    <nav class="navbar fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-3 font-extrabold text-2xl tracking-tighter text-stone-900">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="w-10 h-10 object-contain">
+            PRAKARSA
+        </a>
+
+        <div class="navbar-nav hidden md:flex items-center gap-8 font-medium text-stone-600">
+            <a href="index.html" class="hover:text-[#8b6d3b] transition">Beranda</a>
+            <a href="tentang-kami.html" class="text-[#8b6d3b]">Tentang</a>
+            <a href="scout-fest.html" class="hover:text-[#8b6d3b] transition">Scout Fest</a>
+            <a href="berita.html" class="hover:text-[#8b6d3b] transition">Berita</a>
+            <a href="Kotak Saran.html" class="bg-stone-900 text-white px-6 py-2 rounded-full hover:bg-[#8b6d3b] transition">Kontak</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button id="hamburger-menu" class="md:hidden text-stone-900">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-40 text-center relative">
+        <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-widest text-[#8b6d3b] uppercase bg-amber-100 rounded-full">
+                Creative Collective
+            </span>
+            <h1 class="text-6xl md:text-8xl font-extrabold text-stone-900 mb-8 leading-tight">
+                Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8b6d3b] to-amber-500">Dreams</span> Into Reality.
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-600 leading-relaxed font-light">
+                Kami menggabungkan strategi cerdas dengan desain yang tak lekang oleh waktu untuk menciptakan identitas brand yang tak terlupakan.
+            </p>
+        </div>
+    </header>
+
+    <section class="pb-24 container mx-auto px-4 -mt-20">
+        <div class="main-card flex flex-col lg:flex-row rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.12)]" data-aos="zoom-in-up">
+            
+            <div class="lg:w-5/12 bg-[#8b6d3b] p-16 flex items-center justify-center relative overflow-hidden">
+                <div class="logo-aura"></div>
+                <div class="relative z-10 p-8 bg-white/10 rounded-full backdrop-blur-md border border-white/20 shadow-2xl">
+                    <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Prakarsa Logo" class="w-48 h-48 object-contain">
+                </div>
+            </div>
+
+            <div class="lg:w-7/12 bg-[#a1824a] p-12 lg:p-20 text-white">
+                <h2 class="text-5xl font-extrabold mb-10 leading-tight">
+                    Hello, We Are <br><span class="text-amber-200">Prakarsa.</span>
+                </h2>
+                
+                <div class="space-y-6 mb-16">
+                    <p class="text-xl text-stone-100 leading-relaxed opacity-90 font-light italic">
+                        "Turning complex problems into intuitive, visually stunning digital experiences."
+                    </p>
+                    <p class="text-stone-50 leading-relaxed opacity-80">
+                        Kami adalah Creative Designer dan UI/UX Specialist yang berbasis di SMKN 1 Purwosari. Berfokus pada inovasi digital dan solusi cetak kreatif dengan standar kualitas tinggi.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="info-box group">
+                        <div class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl group-hover:bg-white/40 transition shadow-inner">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest opacity-60">Email Kami</p>
+                            <p class="text-sm font-semibold">halo@prakarsa.id</p>
+                        </div>
+                    </div>
+                    <div class="info-box group">
+                        <div class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl group-hover:bg-white/40 transition shadow-inner">
+                            <i class="fas fa-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest opacity-60">Lokasi</p>
+                            <p class="text-sm font-semibold">Pasuruan, Jawa Timur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-stone-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900 mb-6">Elevate Your Presence</h2>
+                <p class="text-stone-500 max-w-xl mx-auto">Membantu bisnis tumbuh lebih cepat dengan pendekatan desain yang berpusat pada pengguna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card p-12 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-amber-50 rounded-3xl flex items-center justify-center mx-auto mb-8 text-[#8b6d3b] text-3xl shadow-sm">
+                        <i class="fas fa-users-gear"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-stone-900">Expert Team</h4>
+                    <p class="text-stone-500 leading-relaxed">Kolaborasi tenaga ahli kreatif yang berfokus pada detail dan kualitas visual.</p>
+                </div>
+
+                <div class="service-card p-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-amber-50 rounded-3xl flex items-center justify-center mx-auto mb-8 text-[#8b6d3b] text-3xl shadow-sm">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-stone-900">Future Ready</h4>
+                    <p class="text-stone-500 leading-relaxed">Setiap karya dirancang untuk relevan dengan perkembangan tren masa depan.</p>
+                </div>
+
+                <div class="service-card p-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-amber-50 rounded-3xl flex items-center justify-center mx-auto mb-8 text-[#8b6d3b] text-3xl shadow-sm">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-stone-900">Authentic Results</h4>
+                    <p class="text-stone-500 leading-relaxed">Menjamin orisinalitas setiap karya yang memperkuat karakter brand Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-stone-200 text-center text-stone-400 text-sm">
+        <p>&copy; 2026 PRAKARSA. All rights reserved. Created with Passion.</p>
+    </footer>
+
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Hamburger Menu Logic
+        const hamburger = document.querySelector('#hamburger-menu');
+        const navbarNav = document.querySelector('.navbar-nav');
+
+        hamburger.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-lg');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-2', 'shadow-lg');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewan Ambalan - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        #nav-menu { transition: all 0.3s ease-in-out; }
+        .member-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .member-card:hover { transform: translateY(-10px); }
+        .img-gradient { background: linear-gradient(to top, rgba(28, 25, 23, 0.9), transparent); }
+    </style>
+</head>
+<body class="bg-stone-50 overflow-x-hidden antialiased text-stone-900">
+<nav class="fixed top-0 w-full z-[100] bg-stone-950/80 backdrop-blur-lg border-b border-stone-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-white font-extrabold text-xl tracking-tighter group">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+            PRAKARSA
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-stone-300 font-medium text-sm uppercase tracking-wider">
+            <a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a>
+            <a href="TentangKami.html" class="hover:text-amber-400 transition-colors">Tentang</a>
+            <a href="DewanAmbalan.html" class="hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+            <a href="ScoutFest.html" class="hover:text-amber-400 transition-colors">Scout Fest</a>
+            <a href="berita.html" class="hover:text-amber-400 transition-colors">Berita</a>
+            <a href="Galeri.html" class="hover:text-amber-400 transition-colors text-white">Galeri</a>
+            <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-4 py-2 rounded-full font-bold hover:bg-white transition-all shadow-md normal-case">Kotak Saran</a>
+        </div>
+
+        <div class="flex items-center gap-5 text-stone-300">
+            <button id="search-btn" class="hover:text-amber-400 transition-colors">
+                <i data-feather="search" class="w-5 h-5"></i>
+            </button>
+            <button id="hamburger-btn" class="md:hidden hover:text-amber-400 transition-colors">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="nav-menu" class="fixed top-0 -right-full h-screen w-3/4 bg-stone-950 z-[101] p-10 flex flex-col gap-6 md:hidden shadow-2xl border-l border-stone-800">
+        <button id="close-btn" class="self-end text-stone-500 hover:text-white mb-6">
+            <i data-feather="x"></i>
+        </button>
+        <a href="index.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Beranda</a>
+        <a href="TentangKami.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Tentang</a>
+        <a href="DewanAmbalan.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+        <a href="ScoutFest.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Scout Fest</a>
+        <a href="berita.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Berita</a>
+        <a href="Galeri.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Galeri</a>
+        <a href="Kotak Saran.html" class="text-stone-950 bg-amber-500 font-bold p-3 rounded-xl text-center shadow-lg shadow-amber-500/20">Kotak Saran</a>
+    </div>
+</nav>
+
+<header class="pt-48 pb-12 container mx-auto px-6 text-center">
+    <div data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-stone-900 mb-4 tracking-tighter text-stone-900 uppercase">Struktur Dewan Ambalan</h1>
+        <p class="text-amber-600 font-bold text-lg mb-2">UNTUNG SUROPATI - R.A KARTINI</p>
+        <p class="text-stone-500 max-w-2xl mx-auto font-light leading-relaxed uppercase">Gugus Depan Pasuruan 14.147 - 14.148 <br> Pangkalan SMKN 1 Purwosari</p>
+    </div>
+</header>
+
+<section class="pb-32 container mx-auto px-6">
+    
+    <div class="mb-20">
+        <h2 class="text-center text-xl font-bold text-amber-700 mb-10 tracking-widest uppercase">Pimpinan Utama</h2>
+        <div class="flex flex-wrap justify-center gap-10">
+            <div class="member-card w-full max-w-[280px] bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100" data-aos="fade-up">
+                <div class="relative h-72 bg-stone-200">
+                    <img src="URL_FOTO_NANDA" alt="Pradana" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 img-gradient flex flex-col justify-end p-6">
+                        <p class="text-amber-400 text-[10px] font-bold tracking-widest uppercase">Pradana</p>
+                        <h3 class="text-white text-lg font-bold uppercase">Nanda Rizqy A.P</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card w-full max-w-[280px] bg-white rounded-3xl overflow-hidden shadow-xl border border-stone-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-72 bg-stone-200">
+                    <img src="URL_FOTO_NADYA" alt="Wakil Pradana" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 img-gradient flex flex-col justify-end p-6">
+                        <p class="text-amber-400 text-[10px] font-bold tracking-widest uppercase">Wakil Pradana</p>
+                        <h3 class="text-white text-lg font-bold uppercase">Nadya Restu B.P</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-20">
+        <h2 class="text-center text-xl font-bold text-stone-800 mb-10 tracking-widest uppercase">Pengurus Inti</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-stone-900 p-6 rounded-3xl text-center border border-stone-800 shadow-lg" data-aos="zoom-in">
+                <p class="text-amber-500 text-[10px] font-bold mb-1">DEWAN ADAT</p>
+                <h4 class="text-white text-xs font-bold uppercase">Adinda Erika P.S</h4>
+            </div>
+            <div class="bg-stone-900 p-6 rounded-3xl text-center border border-stone-800 shadow-lg" data-aos="zoom-in" data-aos-delay="50">
+                <p class="text-amber-500 text-[10px] font-bold mb-1">SEKRETARIS ADAT</p>
+                <h4 class="text-white text-xs font-bold uppercase">M. Iqbal</h4>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center border border-stone-200 shadow-md" data-aos="zoom-in" data-aos-delay="100">
+                <p class="text-amber-600 text-[10px] font-bold mb-1">KERANI I</p>
+                <h4 class="text-stone-900 text-xs font-bold uppercase">Sovia F</h4>
+            </div>
+            <div class="bg-white p-6 rounded-3xl text-center border border-stone-200 shadow-md" data-aos="zoom-in" data-aos-delay="150">
+                <p class="text-amber-600 text-[10px] font-bold mb-1">BANKIR I</p>
+                <h4 class="text-stone-900 text-xs font-bold uppercase">Charissa Rani A</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="space-y-4" data-aos="fade-right">
+            <h3 class="bg-amber-600 text-white p-3 rounded-xl text-xs font-bold text-center uppercase">B. Kajian Keptramukaan</h3>
+            <div class="bg-stone-100 p-4 rounded-2xl text-center border border-stone-200">
+                <p class="text-[10px] font-bold text-stone-400">KOORDINATOR</p>
+                <p class="text-xs font-bold uppercase">Tifani Rosalis</p>
+                <div class="h-px bg-stone-200 my-2"></div>
+                <p class="text-[10px] font-bold text-stone-400 uppercase">Anggota</p>
+                <p class="text-xs font-bold uppercase">M. Cakra Rizki</p>
+                <p class="text-xs font-bold uppercase">M. Fahri Idris I</p>
+            </div>
+        </div>
+
+        <div class="space-y-4" data-aos="fade-right" data-aos-delay="100">
+            <h3 class="bg-amber-600 text-white p-3 rounded-xl text-xs font-bold text-center uppercase">B. Kegiatan</h3>
+            <div class="bg-stone-100 p-4 rounded-2xl text-center border border-stone-200">
+                <p class="text-[10px] font-bold text-stone-400">KOORDINATOR</p>
+                <p class="text-xs font-bold uppercase">M. Taufiq</p>
+                <div class="h-px bg-stone-200 my-2"></div>
+                <p class="text-[10px] font-bold text-stone-400 uppercase">Anggota</p>
+                <p class="text-xs font-bold uppercase">Sugiono Krisna</p>
+                <p class="text-xs font-bold uppercase">Nuril Najmudin</p>
+            </div>
+        </div>
+
+        </div>
+</section>
+
+<footer class="py-12 bg-stone-950 text-center text-stone-600 text-sm">
+    <p>&copy; 2026 PRAKARSA SCOUT SMKN 1 PURWOSARI. All Rights Reserved.</p>
+</footer>
+
+<script>
+    AOS.init({ duration: 1000, once: true });
+    feather.replace();
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const navMenu = document.getElementById('nav-menu');
+    hamburgerBtn.onclick = () => navMenu.classList.replace('-right-full', 'right-0');
+    closeBtn.onclick = () => navMenu.classList.replace('right-0', '-right-full');
+</script>
+</body>
+</html>

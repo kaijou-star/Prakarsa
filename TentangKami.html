@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfaf5; 
+            background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+        }
+
+        .hero-title {
+            background: linear-gradient(to right, #4a3728, #8b6d3b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Perbaikan Menu Mobile */
+        #nav-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #menu-overlay {
+            display: none;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        #menu-overlay.active { display: block; }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased text-stone-900">
+
+<div id="menu-overlay" class="fixed inset-0 z-[100]"></div>
+
+<nav class="fixed top-0 w-full z-[110] bg-stone-950/90 backdrop-blur-lg border-b border-stone-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-white font-extrabold text-xl tracking-tighter group">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+            PRAKARSA
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-stone-300 font-medium text-sm uppercase tracking-wider">
+            <a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a>
+            <a href="TentangKami.html" class="text-amber-400 font-bold transition-colors">Tentang</a>
+            <a href="DewanAmbalan.html" class="hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+            <a href="ScoutFest.html" class="hover:text-amber-400 transition-colors">Scout Fest</a>
+            <a href="berita.html" class="hover:text-amber-400 transition-colors">Berita</a>
+            <a href="Galeri.html" class="hover:text-amber-400 transition-colors">Galeri</a>
+            <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-4 py-2 rounded-full font-bold hover:bg-white transition-all shadow-md normal-case">Kotak Saran</a>
+        </div>
+
+        <button id="hamburger-btn" class="md:hidden text-white">
+            <i data-feather="menu"></i>
+        </button>
+    </div>
+
+    <div id="nav-menu" class="fixed top-0 right-0 h-screen w-3/4 bg-stone-950 z-[120] p-10 flex flex-col gap-6 md:hidden shadow-2xl translate-x-full border-l border-stone-800">
+        <button id="close-btn" class="self-end text-stone-500 hover:text-white mb-6">
+            <i data-feather="x"></i>
+        </button>
+        <a href="index.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Beranda</a>
+        <a href="TentangKami.html" class="text-amber-400 text-xl font-bold border-b border-stone-800 pb-3">Tentang</a>
+        <a href="DewanAmbalan.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Dewan Ambalan</a>
+        <a href="ScoutFest.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Scout Fest</a>
+        <a href="berita.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Berita</a>
+        <a href="Galeri.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Galeri</a>
+        <a href="Kotak Saran.html" class="text-stone-950 bg-amber-500 font-bold p-3 rounded-xl text-center shadow-lg shadow-amber-500/20">Kotak Saran</a>
+    </div>
+</nav>
+
+<header class="pt-32 md:pt-48 pb-20 container mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div class="w-full lg:w-3/5" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold tracking-widest uppercase mb-6">
+                <i class="fas fa-compass"></i> Satyaku Kudarmakan, Darmaku Kubaktikan
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight hero-title tracking-tighter">
+                Mencetak Pemimpin <br class="hidden md:block"> Masa Depan.
+            </h1>
+            <p class="text-base md:text-lg text-stone-600 leading-relaxed mb-8 max-w-xl">
+                Prakarsa Scout bukan sekadar organisasi kepanduan. Kami adalah wadah petualangan, kemandirian, dan persaudaraan sejati yang berakar kuat pada nilai-nilai Tri Satya dan Dasa Darma.
+            </p>
+        </div>
+        
+        <div class="w-full lg:w-2/5 relative" data-aos="zoom-in">
+            <div class="relative z-10 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white aspect-[4/5] lg:aspect-auto">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" alt="Scout Hero" class="w-full h-full object-cover min-h-[400px]">
+            </div>
+            <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-20 h-20 md:w-32 md:h-32 bg-amber-500 rounded-full flex items-center justify-center text-white text-2xl md:text-4xl shadow-xl animate-bounce z-20">
+                <i class="fas fa-fire"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-20 bg-[#4a3728] text-white rounded-[3rem] md:rounded-[4rem] mx-4 relative overflow-hidden shadow-2xl">
+    <div class="container mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div data-aos="fade-up">
+                <h2 class="text-amber-500 font-bold uppercase tracking-widest mb-4 text-sm">Arah Gerak</h2>
+                <h3 class="text-3xl md:text-5xl font-bold mb-8">Visi Utama Kami</h3>
+                <p class="text-xl md:text-2xl text-amber-100/90 leading-relaxed font-light italic border-l-4 border-amber-500 pl-6">
+                    "Terwujudnya Pramuka Prakarsa sebagai wadah pembentukan karakter yang unggul, inovatif, dan berjiwa sosial tinggi bagi generasi muda."
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-4 md:gap-6" data-aos="fade-up">
+                <div class="bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <div class="text-amber-500 text-xl"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Karakter Tangguh</h4>
+                            <p class="text-stone-400 text-xs">Menanamkan kedisiplinan dan moral berdasarkan Dasa Darma.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition">
+                    <div class="flex gap-4">
+                        <div class="text-amber-500 text-xl"><i class="fas fa-lightbulb"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Inovasi Muda</h4>
+                            <p class="text-stone-400 text-xs">Mengembangkan keterampilan modern yang relevan dengan era digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 container mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-amber-800 font-bold uppercase tracking-[0.3em] text-xs mb-4">Filosofi & Nilai</h2>
+        <h3 class="text-3xl md:text-5xl font-extrabold text-stone-900 tracking-tighter uppercase italic">Mengenal Prakarsa</h3>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-stone-100 h-full" data-aos="fade-right">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 md:w-16 md:h-16 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-700 text-xl md:text-2xl">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h4 class="text-2xl md:text-3xl font-extrabold text-stone-900">Arti Nama</h4>
+            </div>
+            <p class="text-stone-600 leading-relaxed mb-6 text-sm md:text-base">
+                Nama <strong>"PRAKARSA"</strong> mencerminkan semangat inisiatif. Kami mendidik anggota untuk tidak hanya menunggu instruksi, tapi berani memulai langkah nyata.
+            </p>
+            <ul class="space-y-4 text-sm md:text-base">
+                <li class="flex items-start gap-3 text-stone-700">
+                    <i class="fas fa-check-circle text-amber-600 mt-1"></i>
+                    <span><strong>Warna Cokelat:</strong> Kecintaan pada tanah air Indonesia.</span>
+                </li>
+                <li class="flex items-start gap-3 text-stone-700">
+                    <i class="fas fa-check-circle text-amber-600 mt-1"></i>
+                    <span><strong>Warna Emas:</strong> Kejayaan dan kemuliaan akhlak.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left">
+            <div class="bg-[#8b6d3b] p-8 rounded-[2rem] text-white shadow-lg flex flex-col justify-between min-h-[200px]">
+                <i class="fas fa-campground text-3xl opacity-30"></i>
+                <div>
+                    <h5 class="text-xl font-bold mb-2">Outdoor Skill</h5>
+                    <p class="text-amber-100/70 text-xs leading-relaxed">Survival skill dan kemandirian di alam bebas.</p>
+                </div>
+            </div>
+            <div class="bg-stone-900 p-8 rounded-[2rem] text-white shadow-lg flex flex-col justify-between min-h-[200px]">
+                <i class="fas fa-users-cog text-3xl opacity-30"></i>
+                <div>
+                    <h5 class="text-xl font-bold mb-2">Leadership</h5>
+                    <p class="text-stone-400 text-xs leading-relaxed">Kepemimpinan solid dalam sistem beregu.</p>
+                </div>
+            </div>
+            <div class="sm:col-span-2 rounded-[2rem] overflow-hidden h-[250px] shadow-lg">
+                <img src="https://images.unsplash.com/photo-1542044896530-05d85be9b11a?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Scout Activity">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 bg-stone-100 border-t border-stone-200">
+    <div class="container mx-auto px-6 text-center">
+        <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="w-12 mx-auto mb-4 opacity-30 grayscale">
+        <p class="text-stone-400 text-xs uppercase tracking-widest font-bold">&copy; 2026 PRAKARSA SCOUT SMKN 1 PURWOSARI</p>
+    </div>
+</footer>
+
+<script>
+    AOS.init({ duration: 800, once: true });
+    feather.replace();
+    
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    const toggleMenu = (isOpen) => {
+        if (isOpen) {
+            navMenu.classList.remove('translate-x-full');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            navMenu.classList.add('translate-x-full');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+    hamburgerBtn.onclick = () => toggleMenu(true);
+    closeBtn.onclick = () => toggleMenu(false);
+    overlay.onclick = () => toggleMenu(false);
+</script>
+</body>
+</html>

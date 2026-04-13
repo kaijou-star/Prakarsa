@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Efek custom untuk mobile menu agar smooth sesuai index */
+        #nav-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Photo Card Effects */
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            aspect-ratio: 4/5;
+        }
+
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(28, 25, 23, 0.95) 0%, transparent 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        img {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 overflow-x-hidden antialiased text-stone-900">
+
+<nav class="fixed top-0 w-full z-[100] bg-stone-950/80 backdrop-blur-lg border-b border-stone-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-white font-extrabold text-xl tracking-tighter group">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+            PRAKARSA
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-stone-300 font-medium text-sm uppercase tracking-wider">
+            <a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a>
+            <a href="TentangKami.html" class="hover:text-amber-400 transition-colors">Tentang</a>
+            <a href="DewanAmbalan.html" class="hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+            <a href="ScoutFest.html" class="hover:text-amber-400 transition-colors">Scout Fest</a>
+            <a href="berita.html" class="hover:text-amber-400 transition-colors">Berita</a>
+            <a href="Galeri.html" class="hover:text-amber-400 transition-colors text-white">Galeri</a>
+            <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-4 py-2 rounded-full font-bold hover:bg-white transition-all shadow-md normal-case">Kotak Saran</a>
+        </div>
+
+        <div class="flex items-center gap-5 text-stone-300">
+            <button id="search-btn" class="hover:text-amber-400 transition-colors">
+                <i data-feather="search" class="w-5 h-5"></i>
+            </button>
+            <button id="hamburger-btn" class="md:hidden hover:text-amber-400 transition-colors">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="nav-menu" class="fixed top-0 -right-full h-screen w-3/4 bg-stone-950 z-[101] p-10 flex flex-col gap-6 md:hidden shadow-2xl border-l border-stone-800">
+        <button id="close-btn" class="self-end text-stone-500 hover:text-white mb-6">
+            <i data-feather="x"></i>
+        </button>
+        <a href="index.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Beranda</a>
+        <a href="TentangKami.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Tentang</a>
+        <a href="DewanAmbalan.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+        <a href="ScoutFest.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Scout Fest</a>
+        <a href="berita.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Berita</a>
+        <a href="Galeri.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Galeri</a>
+        <a href="Kotak Saran.html" class="text-stone-950 bg-amber-500 font-bold p-3 rounded-xl text-center shadow-lg shadow-amber-500/20">Kotak Saran</a>
+    </div>
+</nav>
+
+<header class="pt-48 pb-16 container mx-auto px-6 text-center">
+    <div data-aos="zoom-out">
+        <div class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Memory Lane</div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-stone-900 mb-6 tracking-tighter">Jejak <span class="text-amber-600">Petualangan</span></h1>
+        <p class="text-stone-500 max-w-2xl mx-auto mb-12">Mengabadikan setiap momen bakti, keceriaan, dan perjuangan dalam balutan seragam cokelat tua.</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up">
+        <button class="filter-btn active px-7 py-2.5 rounded-full font-bold text-sm bg-stone-200 text-stone-600 border border-stone-300 transition-all [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600 shadow-sm" data-filter="all">Semua</button>
+        <button class="filter-btn px-7 py-2.5 rounded-full font-bold text-sm bg-stone-200 text-stone-600 border border-stone-300 transition-all [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600 shadow-sm" data-filter="kemah">Perkemahan</button>
+        <button class="filter-btn px-7 py-2.5 rounded-full font-bold text-sm bg-stone-200 text-stone-600 border border-stone-300 transition-all [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600 shadow-sm" data-filter="lomba">Lomba</button>
+        <button class="filter-btn px-7 py-2.5 rounded-full font-bold text-sm bg-stone-200 text-stone-600 border border-stone-300 transition-all [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600 shadow-sm" data-filter="sosial">Bakti Sosial</button>
+    </div>
+</header>
+
+<section class="pb-32 container mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        
+        <div class="gallery-item" data-category="kemah" data-aos="fade-up">
+            <div class="gallery-card group shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=600" alt="Camping" class="w-full h-full object-cover">
+                <div class="gallery-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest mb-2">PERKEMAHAN</span>
+                    <h4 class="text-white text-2xl font-bold">Malam Api Unggun 2026</h4>
+                    <p class="text-stone-300 text-sm mt-2 font-light">Membangun kehangatan dalam persaudaraan di bawah langit malam.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="lomba" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card group shadow-2xl text-left">
+                <img src="https://images.unsplash.com/photo-1517141468669-d132d473ac0e?auto=format&fit=crop&q=80&w=600" alt="Lomba" class="w-full h-full object-cover">
+                <div class="gallery-overlay absolute inset-0 p-8 flex flex-col justify-end text-left">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest mb-2 uppercase">Ketangkasan</span>
+                    <h4 class="text-white text-2xl font-bold">Lomba PBB Terpadu</h4>
+                    <p class="text-stone-300 text-sm mt-2 font-light">Kedisiplinan adalah kunci utama seorang Pramuka sejati.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="sosial" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-card group shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80&w=600" alt="Bakti" class="w-full h-full object-cover">
+                <div class="gallery-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest mb-2">BAKTI SOSIAL</span>
+                    <h4 class="text-white text-2xl font-bold">Peduli Lingkungan</h4>
+                    <p class="text-stone-300 text-sm mt-2 font-light">Wujud nyata cinta alam dan kasih sayang sesama manusia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="lomba" data-aos="fade-up">
+            <div class="gallery-card group shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=600" alt="Pionering" class="w-full h-full object-cover">
+                <div class="gallery-overlay absolute inset-0 p-8 flex flex-col justify-end">
+                    <span class="text-amber-400 text-xs font-bold tracking-widest mb-2">PIONERING</span>
+                    <h4 class="text-white text-2xl font-bold">Lomba Menara Pandang</h4>
+                    <p class="text-stone-300 text-sm mt-2 font-light">Kreativitas tanpa batas dengan ribuan simpul tali.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="py-24 bg-stone-900 text-center text-white rounded-t-[5rem] mx-4">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold mb-6">Mulai Petualanganmu?</h2>
+        <p class="text-stone-400 mb-10 max-w-xl mx-auto font-light leading-relaxed">Bergabunglah dengan Ambalan Prakarsa dan ukir sejarahmu sendiri dalam setiap kegiatan kami.</p>
+        <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-10 py-4 rounded-full font-extrabold hover:bg-white hover:scale-110 transition-all inline-block shadow-lg">Gabung Sekarang</a>
+    </div>
+</section>
+
+<footer class="py-12 bg-stone-950 text-center text-stone-600 text-sm">
+    <div class="flex justify-center gap-6 mb-4">
+        <a href="#" class="hover:text-amber-500 transition-colors"><i data-feather="instagram"></i></a>
+        <a href="#" class="hover:text-amber-500 transition-colors"><i data-feather="youtube"></i></a>
+        <a href="#" class="hover:text-amber-500 transition-colors"><i data-feather="facebook"></i></a>
+    </div>
+    <p>&copy; 2026 PRAKARSA SCOUT SMKN 1 PURWOSARI. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Initialize AOS & Feather Icons
+    AOS.init({ duration: 1000, once: true });
+    feather.replace();
+
+    // Logic Navbar (Slide-in Sidebar dari Index)
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerBtn.onclick = () => navMenu.classList.replace('-right-full', 'right-0');
+    closeBtn.onclick = () => navMenu.classList.replace('right-0', '-right-full');
+
+    // Gallery Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    item.classList.remove('hidden');
+                    setTimeout(() => item.style.opacity = '1', 50);
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => item.classList.add('hidden'), 300);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

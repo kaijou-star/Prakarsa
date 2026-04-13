@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Kegiatan - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfaf5; }
+        #nav-menu { transition: all 0.3s ease-in-out; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-10px); }
+        .featured-gradient { background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)); }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased text-stone-900">
+
+<nav class="fixed top-0 w-full z-[100] bg-stone-950/80 backdrop-blur-lg border-b border-stone-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-white font-extrabold text-xl tracking-tighter group">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+            PRAKARSA
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-stone-300 font-medium text-sm uppercase tracking-wider">
+            <a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a>
+            <a href="TentangKami.html" class="hover:text-amber-400 transition-colors">Tentang</a>
+            <a href="DewanAmbalan.html" class="hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+            <a href="ScoutFest.html" class="hover:text-amber-400 transition-colors">Scout Fest</a>
+            <a href="berita.html" class="text-amber-400 transition-colors">Berita</a>
+            <a href="Galeri.html" class="hover:text-amber-400 transition-colors">Galeri</a>
+            <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-4 py-2 rounded-full font-bold hover:bg-white transition-all shadow-md normal-case">Kotak Saran</a>
+        </div>
+
+        <div class="flex items-center gap-5 text-stone-300">
+            <button id="hamburger-btn" class="md:hidden hover:text-amber-400 transition-colors">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="nav-menu" class="fixed top-0 -right-full h-screen w-3/4 bg-stone-950 z-[101] p-10 flex flex-col gap-6 md:hidden shadow-2xl border-l border-stone-800">
+        <button id="close-btn" class="self-end text-stone-500 hover:text-white mb-6">
+            <i data-feather="x"></i>
+        </button>
+        <a href="index.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Beranda</a>
+        <a href="TentangKami.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Tentang</a>
+        <a href="DewanAmbalan.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Dewan Ambalan</a>
+        <a href="ScoutFest.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Scout Fest</a>
+        <a href="berita.html" class="text-amber-400 text-xl font-bold border-b border-stone-800 pb-3">Berita</a>
+        <a href="Galeri.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3">Galeri</a>
+        <a href="Kotak Saran.html" class="text-stone-950 bg-amber-500 font-bold p-3 rounded-xl text-center shadow-lg shadow-amber-500/20">Kotak Saran</a>
+    </div>
+</nav>
+
+<header class="pt-48 pb-12 container mx-auto px-6">
+    <div data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-stone-900 mb-4 tracking-tighter uppercase italic">Warta <span class="text-amber-600">Prakarsa</span></h1>
+        <p class="text-stone-500 max-w-2xl font-light leading-relaxed uppercase tracking-widest text-sm">Update Terkini Aktivitas & Inspirasi Ambalan</p>
+    </div>
+</header>
+
+<main class="container mx-auto px-6 pb-32">
+    <section class="mb-16" data-aos="fade-up">
+        <div class="relative w-full h-[450px] rounded-[3rem] overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Scout Camp">
+            <div class="absolute inset-0 featured-gradient flex flex-col justify-end p-8 md:p-12">
+                <span class="bg-amber-500 text-stone-950 px-4 py-1 rounded-full text-[10px] font-bold uppercase w-fit mb-4 tracking-widest">Utama</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">Membangun Karakter Melalui <br>Ekspedisi Rimba 2026</h2>
+                <p class="text-stone-300 max-w-2xl mb-6 font-light hidden md:block">Penjelajahan lintas alam angkatan ke-10 yang melibatkan lebih dari 200 anggota aktif dalam misi pelestarian lingkungan.</p>
+                <a href="#" class="bg-white text-stone-950 px-8 py-3 rounded-full font-bold text-sm w-fit hover:bg-amber-400 transition-colors">Baca Detail Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-2/3 space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <article class="bg-white p-6 rounded-[2.5rem] shadow-sm card-hover border border-stone-100" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1542044896530-05d85be9b11a?auto=format&fit=crop&q=80&w=400" class="w-full h-48 rounded-3xl object-cover mb-6">
+                    <span class="text-amber-700 font-bold text-[10px] uppercase tracking-widest">Kegiatan</span>
+                    <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">Latihan Gabungan Se-Pasuruan</h3>
+                    <p class="text-stone-500 text-sm mb-4">Mengasah teknik survival di alam terbuka bersama ribuan anggota...</p>
+                    <a href="#" class="text-amber-600 font-bold text-xs inline-flex items-center gap-2">Selengkapnya <i data-feather="chevron-right" class="w-4 h-4"></i></a>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2.5rem] shadow-sm card-hover border border-stone-100" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=400" class="w-full h-48 rounded-3xl object-cover mb-6">
+                    <span class="text-amber-700 font-bold text-[10px] uppercase tracking-widest">Tips</span>
+                    <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">5 Simpul Wajib Penegak</h3>
+                    <p class="text-stone-500 text-sm mb-4">Simpul-simpul dasar yang akan mempermudah hidupmu saat berkemah...</p>
+                    <a href="simpul.html" class="text-amber-600 font-bold text-xs inline-flex items-center gap-2">Selengkapnya <i data-feather="chevron-right" class="w-4 h-4"></i></a>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2.5rem] shadow-sm card-hover border border-stone-100" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=400" class="w-full h-48 rounded-3xl object-cover mb-6">
+                    <span class="text-amber-700 font-bold text-[10px] uppercase tracking-widest">Inspirasi</span>
+                    <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">Kisah Purna Prakarsa</h3>
+                    <p class="text-stone-500 text-sm mb-4">Belajar dari mereka yang sukses di dunia profesional berkat Pramuka...</p>
+                    <a href="#" class="text-amber-600 font-bold text-xs inline-flex items-center gap-2">Selengkapnya <i data-feather="chevron-right" class="w-4 h-4"></i></a>
+                </article>
+
+                <article class="bg-white p-6 rounded-[2.5rem] shadow-sm card-hover border border-stone-100" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=400" class="w-full h-48 rounded-3xl object-cover mb-6">
+                    <span class="text-amber-700 font-bold text-[10px] uppercase tracking-widest">Warta</span>
+                    <h3 class="text-xl font-bold text-stone-900 mt-2 mb-3">Update Seragam Terbaru</h3>
+                    <p class="text-stone-500 text-sm mb-4">Informasi mengenai atribut dan kerapian seragam sesuai aturan Kwarnas...</p>
+                    <a href="#" class="text-amber-600 font-bold text-xs inline-flex items-center gap-2">Selengkapnya <i data-feather="chevron-right" class="w-4 h-4"></i></a>
+                </article>
+
+            </div>
+        </div>
+
+        <aside class="lg:w-1/3 space-y-8">
+            <div class="bg-stone-900 p-8 rounded-[2.5rem] text-white" data-aos="fade-left">
+                <h4 class="text-lg font-bold mb-6">Kategori</h4>
+                <div class="space-y-4">
+                    <a href="#" class="flex justify-between items-center hover:text-amber-400 transition"><span># Agenda</span> <span class="bg-stone-800 px-3 py-1 rounded-full text-xs">12</span></a>
+                    <a href="#" class="flex justify-between items-center hover:text-amber-400 transition"><span># Prestasi</span> <span class="bg-stone-800 px-3 py-1 rounded-full text-xs">8</span></a>
+                    <a href="#" class="flex justify-between items-center hover:text-amber-400 transition"><span># Tutorial</span> <span class="bg-stone-800 px-3 py-1 rounded-full text-xs">15</span></a>
+                    <a href="#" class="flex justify-between items-center hover:text-amber-400 transition"><span># Pengumuman</span> <span class="bg-stone-800 px-3 py-1 rounded-full text-xs">5</span></a>
+                </div>
+            </div>
+
+            <div class="bg-amber-500 p-8 rounded-[2.5rem] text-stone-950" data-aos="fade-left" data-aos-delay="100">
+                <h4 class="text-lg font-black uppercase tracking-tighter mb-6 italic">Mendatang</h4>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="font-black text-2xl opacity-30">25 <br> <span class="text-sm">APR</span></div>
+                        <div>
+                            <p class="font-bold leading-tight">Bakti Sosial Ramadan 1447 H</p>
+                            <p class="text-xs opacity-70">Purwosari, Pasuruan</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="font-black text-2xl opacity-30">12 <br> <span class="text-sm">MEI</span></div>
+                        <div>
+                            <p class="font-bold leading-tight">Diklat Dewan Ambalan XI</p>
+                            <p class="text-xs opacity-70">Bumi Perkemahan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="py-12 bg-stone-950 text-center text-stone-600 text-xs">
+    <img src="IMG/logo-prakarsa-removebg-preview (1).png" class="w-10 mx-auto mb-6 grayscale opacity-20">
+    <p class="font-bold uppercase tracking-widest mb-2">Pramuka Prakarsa SMKN 1 Purwosari</p>
+    <p>&copy; 2026 PRAKARSA SCOUT. Satyaku Kudarmakan, Darmaku Kubaktikan.</p>
+</footer>
+
+<script>
+    AOS.init({ duration: 1000, once: true });
+    feather.replace();
+
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerBtn.onclick = () => {
+        navMenu.classList.remove('-right-full');
+        navMenu.classList.add('right-0');
+    }
+
+    closeBtn.onclick = () => {
+        navMenu.classList.remove('right-0');
+        navMenu.classList.add('-right-full');
+    }
+
+    window.onclick = (e) => {
+        if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            navMenu.classList.remove('right-0');
+            navMenu.classList.add('-right-full');
+        }
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        #nav-menu { transition: all 0.3s ease-in-out; }
+
+        .achievement-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .achievement-card:hover {
+            transform: scale(1.02);
+            border-color: #f59e0b; /* amber-500 */
+        }
+    </style>
+</head>
+<body class="bg-stone-50 overflow-x-hidden antialiased text-stone-900">
+
+<nav class="fixed top-0 w-full z-[100] bg-stone-950/80 backdrop-blur-lg border-b border-stone-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 text-white font-extrabold text-xl tracking-tighter group">
+            <img src="IMG/logo-prakarsa-removebg-preview (1).png" alt="Logo" class="h-10 w-auto group-hover:rotate-12 transition-transform">
+            PRAKARSA
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-stone-300 font-medium text-sm">
+            <a href="index.html" class="hover:text-amber-400 transition-colors">Beranda</a>
+            <a href="TentangKami.html" class="hover:text-amber-400 transition-colors">Tentang</a>
+            <a href="ScoutFest.html" class="hover:text-amber-400 transition-colors">Scout Fest</a>
+            <a href="berita.html" class="hover:text-amber-400 transition-colors">Berita</a>
+            <a href="Galeri.html" class="hover:text-amber-400 transition-colors">Galeri</a>
+            <a href="Kotak Saran.html" class="bg-amber-500 text-stone-950 px-4 py-2 rounded-full font-bold hover:bg-white transition-all shadow-md">Kotak Saran</a>
+        </div>
+
+        <div class="flex items-center gap-5 text-stone-300">
+            <button id="hamburger-btn" class="md:hidden hover:text-amber-400 transition-colors">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="nav-menu" class="fixed top-0 -right-full h-screen w-3/4 bg-stone-950 z-[101] p-10 flex flex-col gap-6 md:hidden shadow-2xl border-l border-stone-800">
+        <button id="close-btn" class="self-end text-stone-500 hover:text-white mb-6">
+            <i data-feather="x"></i>
+        </button>
+        <a href="index.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Beranda</a>
+        <a href="TentangKami.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Tentang</a>
+        <a href="ScoutFest.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Scout Fest</a>
+        <a href="berita.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Berita</a>
+        <a href="Galeri.html" class="text-white text-xl font-bold border-b border-stone-800 pb-3 hover:text-amber-400 transition-colors">Galeri</a>
+        <a href="Kotak Saran.html" class="text-stone-950 bg-amber-500 font-bold p-3 rounded-xl text-center">Kotak Saran</a>
+    </div>
+</nav>
+
+<header class="pt-48 pb-16 container mx-auto px-6 text-center">
+    <div data-aos="zoom-out">
+        <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-1.5 rounded-full mb-6">
+            <i data-feather="award" class="w-4 h-4"></i>
+            <span class="text-xs font-bold uppercase tracking-widest">Hall of Fame</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-stone-900 mb-6 tracking-tighter italic">Puncak <span class="text-amber-600">Prestasi</span></h1>
+        <p class="text-stone-500 max-w-2xl mx-auto leading-relaxed">Daftar pencapaian dan penghargaan yang berhasil diraih oleh Ambalan Prakarsa SMKN 1 Purwosari di berbagai tingkat kompetisi.</p>
+    </div>
+</header>
+
+<section class="pb-32 container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="achievement-card bg-white border border-stone-200 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden" data-aos="fade-up">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl"></div>
+            <div class="flex items-start justify-between mb-8">
+                <div class="bg-amber-500 w-14 h-14 rounded-2xl flex items-center justify-center text-stone-950 shadow-lg shadow-amber-500/30">
+                    <i data-feather="award" class="w-8 h-8"></i>
+                </div>
+                <span class="text-stone-400 font-bold text-4xl opacity-20">01</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-stone-900 mb-2">Juara Umum Putra</h3>
+            <p class="text-amber-600 font-bold mb-4 text-sm tracking-wide">Lomba Tangkas Pramuka 2026</p>
+            <p class="text-stone-500 text-sm leading-relaxed font-light">Berhasil membawa pulang piala bergilir tingkat Kabupaten dengan dominasi di kategori Pionering dan PBB.</p>
+        </div>
+
+        <div class="achievement-card bg-stone-900 border border-stone-800 rounded-[2.5rem] p-8 shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-500/20 rounded-full blur-2xl"></div>
+            <div class="flex items-start justify-between mb-8">
+                <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center text-stone-900">
+                    <i data-feather="star" class="w-8 h-8"></i>
+                </div>
+                <span class="text-stone-700 font-bold text-4xl opacity-20">02</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2">Juara 1 Pionering</h3>
+            <p class="text-amber-400 font-bold mb-4 text-sm tracking-wide">Scout Competition Jatim 2025</p>
+            <p class="text-stone-400 text-sm leading-relaxed font-light">Membangun replika jembatan gantung dengan 500 tongkat dalam waktu kurang dari 60 menit.</p>
+        </div>
+
+        <div class="achievement-card bg-white border border-stone-200 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-start justify-between mb-8">
+                <div class="bg-stone-100 w-14 h-14 rounded-2xl flex items-center justify-center text-amber-600">
+                    <i data-feather="zap" class="w-8 h-8"></i>
+                </div>
+                <span class="text-stone-400 font-bold text-4xl opacity-20">03</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-stone-900 mb-2">Terbaik 3 Yel-Yel</h3>
+            <p class="text-amber-600 font-bold mb-4 text-sm tracking-wide">Jamboree SMK Se-Indonesia</p>
+            <p class="text-stone-500 text-sm leading-relaxed font-light">Menampilkan kreativitas koreografi dan semangat yang membara di depan ribuan peserta.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="py-20 bg-stone-100 border-y border-stone-200 mb-20">
+    <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-aos="fade-up">
+            <p class="text-4xl font-black text-stone-900">15+</p>
+            <p class="text-stone-500 text-xs uppercase tracking-widest font-bold mt-2">Piala Emas</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+            <p class="text-4xl font-black text-stone-900">08</p>
+            <p class="text-stone-500 text-xs uppercase tracking-widest font-bold mt-2">Juara Umum</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+            <p class="text-4xl font-black text-stone-900">2026</p>
+            <p class="text-stone-500 text-xs uppercase tracking-widest font-bold mt-2">Tahun Juara</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+            <p class="text-4xl font-black text-stone-900">100%</p>
+            <p class="text-stone-500 text-xs uppercase tracking-widest font-bold mt-2">Dedikasi</p>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 bg-stone-950 text-center text-stone-600 text-sm">
+    <p>&copy; 2026 PRAKARSA SCOUT SMKN 1 PURWOSARI. All Rights Reserved.</p>
+</footer>
+
+<script>
+    AOS.init({ duration: 1000, once: true });
+    feather.replace();
+
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerBtn.onclick = () => navMenu.clasList.replace('-right-full', 'right-0');
+    closeBtn.onclick = () => navMenu.classList.replace('right-0', '-right-full');
+</script>
+
+</body>
+</html>

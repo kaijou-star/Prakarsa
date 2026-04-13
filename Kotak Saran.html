@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kotak Saran - PRAKARSA Scout</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfaf5;
+            color: #1c1917;
+            /* Mencegah pergeseran horizontal di mobile */
+            overflow-x: hidden; 
+        }
+        .input-focus {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: #f3f4f6;
+            /* Mencegah zoom otomatis pada input iOS */
+            font-size: 16px !important; 
+        }
+        .input-focus:focus {
+            border-color: #8b6d3b;
+            background: white;
+            box-shadow: 0 10px 25px -5px rgba(139, 109, 59, 0.1);
+            outline: none;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-stone-100">
+        <a href="index.html" class="flex items-center gap-3 font-extrabold text-lg md:text-xl tracking-tighter">
+            <i class="fas fa-arrow-left text-xs md:text-sm mr-1 text-amber-800"></i> PRAKARSA
+        </a>
+    </nav>
+
+    <header class="pt-28 md:pt-40 pb-8 md:pb-12 container mx-auto px-4 md:px-6 max-w-4xl text-center">
+        <div data-aos="fade-up">
+            <h1 class="text-3xl md:text-6xl font-extrabold text-stone-900 mb-4 md:mb-6 leading-tight">Suara <span class="text-amber-800">Pramuka</span></h1>
+            <p class="text-stone-500 text-sm md:text-lg px-2">Punya ide kreatif, kritik, atau saran untuk kemajuan Ambalan? Jangan ragu untuk berbagi bersama kami.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6 pb-20 md:pb-32 max-w-5xl">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
+            
+            <div class="w-full lg:w-1/3 space-y-6 md:space-y-8" data-aos="fade-right">
+                <div class="p-6 md:p-8 bg-amber-800 rounded-[2rem] md:rounded-[2.5rem] text-white shadow-2xl shadow-amber-900/20">
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Mari Berdiskusi</h3>
+                    <p class="text-amber-100/80 text-xs md:text-sm leading-relaxed mb-6">Setiap pesan yang masuk akan kami baca dan diskusikan dalam rapat dewan ambalan.</p>
+                    <div class="space-y-4 text-xs md:text-sm">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-amber-400 mt-1"></i>
+                            <span class="break-all">prakarsa@smkn1purwosari.sch.id</span>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+                            <span>Sanggar Pramuka SMKN 1 Purwosari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3" data-aos="fade-left">
+                <div class="glass-card p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-xl border border-stone-200/50">
+                    <form id="form-aspirasi" class="space-y-5 md:space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs md:text-sm font-bold text-stone-700 ml-1">Nama Lengkap</label>
+                                <input type="text" name="nama" required placeholder="Masukkan namamu..." class="w-full px-5 py-3 md:py-4 rounded-xl md:rounded-2xl input-focus">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs md:text-sm font-bold text-stone-700 ml-1">Kelas / Jabatan</label>
+                                <input type="text" name="kelas" required placeholder="X RPL 2 / Penegak" class="w-full px-5 py-3 md:py-4 rounded-xl md:rounded-2xl input-focus">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs md:text-sm font-bold text-stone-700 ml-1">Kategori Pesan</label>
+                            <div class="relative">
+                                <select name="kategori" class="w-full px-5 py-3 md:py-4 rounded-xl md:rounded-2xl input-focus appearance-none bg-stone-100">
+                                    <option value="Saran Kegiatan">Saran Kegiatan</option>
+                                    <option value="Kritik Membangun">Kritik Membangun</option>
+                                    <option value="Ide Project Baru">Ide Project Baru</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                                <i class="fas fa-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none text-xs"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs md:text-sm font-bold text-stone-700 ml-1">Pesan Aspirasi</label>
+                            <textarea name="pesan" rows="4" md:rows="5" required placeholder="Tuliskan ide atau saranmu di sini..." class="w-full px-5 py-3 md:py-4 rounded-2xl md:rounded-3xl input-focus"></textarea>
+                        </div>
+
+                        <button type="submit" id="btn-submit" class="w-full bg-stone-900 text-white py-4 md:py-5 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-amber-800 active:scale-[0.98] transition-all shadow-xl flex items-center justify-center gap-3 group">
+                            <span id="btn-text">Kirim Aspirasi</span>
+                            <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 md:py-12 text-center border-t border-stone-200 px-4">
+        <p class="text-stone-400 text-[10px] md:text-xs tracking-widest uppercase">&copy; 2026 PRAKARSA SCOUT. Kami mendengar, Kami bertumbuh.</p>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyx1vsh3Jmt5hSuOj5OI-qUCPiV7ZgP3saqBKAcuRmJoPWmt3-wbJuw8PYN5TXWp2T92g/exec';
+        const form = document.getElementById('form-aspirasi');
+        const btnText = document.getElementById('btn-text');
+        const btnSubmit = document.getElementById('btn-submit');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            btnText.innerHTML = "Mengirim...";
+            btnSubmit.disabled = true;
+            btnSubmit.classList.add('opacity-50');
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form),
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert("Terima kasih Kak! Atas aspirasinya");
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert("Waduh, ada masalah teknis. Coba cek koneksi dulu");
+            })
+            .finally(() => {
+                btnText.innerHTML = "Kirim Aspirasi";
+                btnSubmit.disabled = false;
+                btnSubmit.classList.remove('opacity-50');
+            });
+        });
+    </script>
+</body>
+</html>
